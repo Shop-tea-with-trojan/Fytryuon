@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Язык Fytryuon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 1rem;
+            overflow: auto;
+        }
+        .console {
+            background: black;
+            color: lime;
+            font-family: monospace;
+            padding: 1rem;
+            height: 200px;
+            overflow-y: auto;
+            display: none;
+            margin-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Язык программирования Fytryuon</h1>
+    </header>
+    <main>
+        <p>Fytryuon — это экспериментальный язык программирования, разработанный для изучения нового синтаксиса и подходов к решению задач. Его особенности:</p>
+        <ul>
+            <li>Минималистичный синтаксис</li>
+            <li>Интуитивно понятные конструкции</li>
+            <li>Гибкость для написания как простых, так и сложных программ</li>
+        </ul>
+        <h2>Пример кода:</h2>
+        <pre>
+Import_math
+Sumbyt_print: "Привет, мир!");
+/"Начало блока математики"/
+:math_start :
+
+    /"Объявление переменной x и присваивание ей значения 10"/
+    Uoion = variable, Variable = x
+    Uoion_meaning x, Holdet_meaning, meaning = [ 10 ]
+
+    /"Объявление переменной y и присваивание ей значения 5"/
+    Uoion = variable, Variable = y
+    Uoion_meaning y, Holdet_meaning, meaning = [ 5 ]
+
+    /"Вычисляем сумму x + y и выводим результат"/
+    Uoion = math
+        Sumbyt_print: "x + y = "
+        Sumbyt_print: [ x + y ]
+
+:math_stop :
+
+        </pre>
+        <button class="btn" onclick="runCode()">Запустить код</button>
+        <div id="console" class="console"></div>
+    </main>
+    <script>
+        function runCode() {
+            const consoleElement = document.getElementById('console');
+            consoleElement.style.display = 'block';
+            consoleElement.innerHTML = '';
+
+            const output = [
+                'Запуск программы...',
+                'Вывод: Привет, мир!',
+                'Инициализация переменных: x = 5, y = 10',
+                'Вычисление: сумма = x + y',
+                'Результат: сумма = 15',
+                'Программа завершена.'
+            ];
+
+            output.forEach((line, index) => {
+                setTimeout(() => {
+                    consoleElement.innerHTML += line + '<br>';
+                    consoleElement.scrollTop = consoleElement.scrollHeight;
+                }, index * 500);
+            });
+        }
+    </script>
+</body>
+</html>
