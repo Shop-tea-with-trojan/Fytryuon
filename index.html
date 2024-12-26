@@ -3,115 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Язык Fytryuon</title>
+    <title>Защищённый сайт</title>
     <style>
+        /* Основные стили */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: white;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
             text-align: center;
+            max-width: 600px;
         }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        pre {
-            background: #eee;
-            padding: 1rem;
-            overflow: auto;
-        }
-        .console {
-            background: black;
-            color: lime;
-            font-family: monospace;
-            padding: 1rem;
-            height: 200px;
-            overflow-y: auto;
-            display: none;
-            margin-top: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            color: white;
-            background-color: #007BFF;
+
+        button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
             border: none;
-            border-radius: 4px;
-            text-decoration: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .btn:hover {
-            background-color: #0056b3;
+
+        button:hover {
+            background-color: #0c57b6;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Язык программирования Fytryuon</h1>
-    </header>
-    <main>
-        <p>Fytryuon — это экспериментальный язык программирования, разработанный для изучения нового синтаксиса и подходов к решению задач. Его особенности:</p>
-        <ul>
-            <li>Минималистичный синтаксис</li>
-            <li>Интуитивно понятные конструкции</li>
-            <li>Гибкость для написания как простых, так и сложных программ</li>
-        </ul>
-        <h2>Пример кода:</h2>
-        <pre>
-Import_math
-Sumbyt_print: "Привет, мир!");
-/"Начало блока математики"/
-:math_start :
+    <h1>Пример защищённого сайта</h1>
+    <p>Этот сайт имеет максимальную защиту от воровства кода и доступа к исходному коду. Попробуйте открыть консоль или копировать код!</p>
+    <button onclick="runCode()">Запустить код</button>
 
-    /"Объявление переменной x и присваивание ей значения 10"/
-    Uoion = variable, Variable = x
-    Uoion_meaning x, Holdet_meaning, meaning = [ 10 ]
-
-    /"Объявление переменной y и присваивание ей значения 5"/
-    Uoion = variable, Variable = y
-    Uoion_meaning y, Holdet_meaning, meaning = [ 5 ]
-
-    /"Вычисляем сумму x + y и выводим результат"/
-    Uoion = math
-        Sumbyt_print: "x + y = "
-        Sumbyt_print: [ x + y ]
-
-:math_stop :
-
-        </pre>
-        <button class="btn" onclick="runCode()">Запустить код</button>
-        <div id="console" class="console"></div>
-    </main>
     <script>
+        // Обнаружение инструментов разработчика (DevTools)
+        let devtoolsOpen = false;
+
+        // Проверка размеров окна, чтобы обнаружить открытие DevTools
+        setInterval(() => {
+            if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+                devtoolsOpen = true;
+                alert("Обнаружено открытие инструментов разработчика!");
+                window.location.href = "about:blank"; // Перенаправление на пустую страницу
+            }
+        }, 1000);
+
+        // Отключение правой кнопки мыши
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+        // Отключение сочетаний клавиш
+        document.addEventListener("keydown", (event) => {
+            if (
+                (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "c" || event.key === "p")) || // Ctrl+U/S/C/P
+                event.key === "F12" || // F12
+                (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) // Ctrl+Shift+I/J
+            ) {
+                event.preventDefault();
+                alert("Эта команда запрещена на сайте!");
+            }
+        });
+
+        // Отключение консоли (перезапись функций консоли)
+        console.log = function() {};
+        console.warn = function() {};
+        console.error = function() {};
+        console.debug = function() {};
+        console.info = function() {};
+
+        // Имитация выполнения кода
         function runCode() {
-            const consoleElement = document.getElementById('console');
-            consoleElement.style.display = 'block';
-            consoleElement.innerHTML = '';
-
-            const output = [
-                'Запуск программы...',
-                'Вывод: Привет, мир!',
-                'Инициализация переменных: x = 5, y = 10',
-                'Вычисление: сумма = x + y',
-                'Результат: сумма = 15',
-                'Программа завершена.'
-            ];
-
-            output.forEach((line, index) => {
-                setTimeout(() => {
-                    consoleElement.innerHTML += line + '<br>';
-                    consoleElement.scrollTop = consoleElement.scrollHeight;
-                }, index * 500);
-            });
+            alert("Пример кода успешно запущен!");
         }
     </script>
 </body>
