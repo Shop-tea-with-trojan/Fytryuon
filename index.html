@@ -1,93 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Защищённый сайт</title>
-    <style>
-        /* Основные стили */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0d0d0d;
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        p {
-            text-align: center;
-            max-width: 600px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #1a73e8;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0c57b6;
-        }
-    </style>
+    <title>Зашифрованный JavaScript</title>
 </head>
 <body>
-    <h1>Пример защищённого сайта</h1>
-    <p>Этот сайт имеет максимальную защиту от воровства кода и доступа к исходному коду. Попробуйте открыть консоль или копировать код!</p>
+    <h1>Пример сайта с зашифрованным JavaScript</h1>
     <button onclick="runCode()">Запустить код</button>
 
     <script>
-        // Обнаружение инструментов разработчика (DevTools)
-        let devtoolsOpen = false;
-
-        // Проверка размеров окна, чтобы обнаружить открытие DevTools
-        setInterval(() => {
-            if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
-                devtoolsOpen = true;
-                alert("Обнаружено открытие инструментов разработчика!");
-                window.location.href = "about:blank"; // Перенаправление на пустую страницу
-            }
-        }, 1000);
-
-        // Отключение правой кнопки мыши
-        document.addEventListener("contextmenu", (event) => event.preventDefault());
-
-        // Отключение сочетаний клавиш
-        document.addEventListener("keydown", (event) => {
-            if (
-                (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "c" || event.key === "p")) || // Ctrl+U/S/C/P
-                event.key === "F12" || // F12
-                (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) // Ctrl+Shift+I/J
-            ) {
-                event.preventDefault();
-                alert("Эта команда запрещена на сайте!");
-            }
+        function _0x207e(){const _0x544f60=['3043476BCYGFX','observe','2ZPLxRc','88332gZZoXi','505FAMFKZ','shiftKey','10420ulgGYk','2199440lJzinK','location','now','ctrlKey','7ZKpVxB','addEventListener','14795FXAVDk','keydown','href','5628717LyVgzU','key','11754544PxelMl','F12','178909BuyywI','about:blank','contextmenu','Обнаружено\x20вмешательство!','Эта\x20команда\x20запрещена!','Пример\x20кода\x20успешно\x20запущен!'];_0x207e=function(){return _0x544f60;};return _0x207e();}
+        const _0x5bda16=_0x47ce;
+        (function(_0x2a2bc6,_0x494f0e){const _0x5329ce=_0x47ce,_0x4c7119=_0x2a2bc6();while(!![]){try{const _0x52eafa=-parseInt(_0x5329ce(0x98))/0x1*(-parseInt(_0x5329ce(0xa0))/0x2)+-parseInt(_0x5329ce(0x9e))/0x3+-parseInt(_0x5329ce(0xa5))/0x4+-parseInt(_0x5329ce(0xa2))/0x5*(-parseInt(_0x5329ce(0xa1))/0x6)+parseInt(_0x5329ce(0xa9))/0x7*(parseInt(_0x5329ce(0x96))/0x8)+parseInt(_0x5329ce(0x94))/0x9+parseInt(_0x5329ce(0xa4))/0xa*(-parseInt(_0x5329ce(0xab))/0xb);if(_0x52eafa===_0x494f0e)break;else _0x4c7119['push'](_0x4c7119['shift']());}catch(_0xe417a6){_0x4c7119['push'](_0x4c7119['shift']());}}}(_0x207e,0xc2060));
+        const threshold=0x64;
+        setInterval(()=>{
+            const _0x4b8778=_0x47ce,_0x3e6e38=performance['now']();
+            debugger;
+            const _0xe04b11=performance[_0x4b8778(0xa7)]()-_0x3e6e38;
+            _0xe04b11>threshold&&(alert(_0x4b8778(0x9b)),window['location'][_0x4b8778(0x93)]=_0x4b8778(0x99));
+        },0x3e8);
+        document['addEventListener'](_0x5bda16(0x9a),_0x35fedc=>_0x35fedc['preventDefault']());
+        document[_0x5bda16(0xaa)](_0x5bda16(0xac),_0x2e8008=>{
+            const _0x3d12c7=_0x5bda16;
+            (_0x2e8008[_0x3d12c7(0xa8)]&&(_0x2e8008[_0x3d12c7(0x95)]==='u'||_0x2e8008[_0x3d12c7(0x95)]==='s'||_0x2e8008[_0x3d12c7(0x95)]==='c'||_0x2e8008[_0x3d12c7(0x95)]==='p')||_0x2e8008[_0x3d12c7(0x95)]===_0x3d12c7(0x97)||_0x2e8008[_0x3d12c7(0xa8)]&&_0x2e8008[_0x3d12c7(0xa3)]&&(_0x2e8008['key']==='I'||_0x2e8008['key']==='J'))&&(_0x2e8008['preventDefault'](),alert(_0x3d12c7(0x9c)));
         });
-
-        // Отключение консоли (перезапись функций консоли)
-        console.log = function() {};
-        console.warn = function() {};
-        console.error = function() {};
-        console.debug = function() {};
-        console.info = function() {};
-
-        // Имитация выполнения кода
-        function runCode() {
-            alert("Пример кода успешно запущен!");
+        const observer=new MutationObserver(()=>{
+            const _0x4f4b97=_0x5bda16;
+            alert('Обнаружено\x20изменение\x20DOM!'),window[_0x4f4b97(0xa6)][_0x4f4b97(0x93)]=_0x4f4b97(0x99);
+        });
+        observer[_0x5bda16(0x9f)](document,{'childList':!![],'subtree':!![]});
+        function _0x47ce(_0x36bc02,_0x5f30b8){
+            const _0x207e06=_0x207e();
+            return _0x47ce=function(_0x47ce30,_0x4a79f9){
+                _0x47ce30=_0x47ce30-0x93;
+                let _0x313629=_0x207e06[_0x47ce30];
+                return _0x313629;
+            },_0x47ce(_0x36bc02,_0x5f30b8);
+        }
+        function runCode(){
+            const _0x2742e7=_0x5bda16;
+            alert(_0x2742e7(0x9d));
         }
     </script>
 </body>
